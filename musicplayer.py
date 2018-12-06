@@ -17,11 +17,10 @@ sngnme = StringVar()
 idx = 0
 
 songlabel = Label(root, textvariable=v,background = "burlywood1", relief = GROOVE)
-songlabel.pack( fill =X)#, expand = 1) BOTH, expand = 1)
-
+songlabel.pack( fill =X)
 def nxtsng():
     global idx
-    idx-=1     #idx+=1
+    idx-=1    
     pygame.mixer.music.load(lsngs[idx])
     pygame.mixer.music.play()
     updtlbl() 
@@ -30,7 +29,7 @@ def prevsng():
     idx+=1 #idx-=1
     pygame.mixer.music.load(lsngs[idx])
     pygame.mixer.music.play()
-    updtlbl()  ############???????????????????
+    updtlbl()  
 
 def stpsng():
     pygame.mixer.music.stop()
